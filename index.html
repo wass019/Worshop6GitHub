@@ -7,7 +7,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<style>
+    .card {
+        height: 300px;
+        width: 300px;
+        border: 3px dashed
+        steelblue;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        grid-template-rows: repeat(3, 400px);
+        justify-content: center;
+
+    }
+
+    .double-span-col{
+        width: auto;
+        grid-column-start: span 2;
+        justify-self: stretch;
+    
+
+    }
+    .double-span-row{
+        height: auto;
+        grid-row: span 2;
+        align-self: stretch;
+    }
+
+</style>
 <body>
+    <div class="grid-container">
+        <div class="card double-span-row"></div>
+        <div class="card double-span-col"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card double-span-col "></div>
+
+    </div>
     
 </body>
 </html>
